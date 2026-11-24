@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="app">
       <div className='boardContainer'>
-        <h1 className="boardTitle"> Groundskeeper Board </h1>
+        <h1 className="boardTitle"> Groundkeeper Board </h1>
 
         <div className = "boardColumns">
         {dropZones.map((zone) => {
