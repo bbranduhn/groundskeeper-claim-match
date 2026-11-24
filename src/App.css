@@ -1,0 +1,113 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 1rem 2rem;
+  box-sizing: border-box;
+  background: #1E1E1E;
+}
+
+.boardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns the title to the exact left edge of the first zone */
+  gap: 1.25rem;
+}
+
+.boardTitle {
+  margin: 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+}
+
+.boardColumns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.dragElement {
+  width: 15rem;
+  height: 8rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #2D3440;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.dropZone {
+  width: 16rem;
+  min-height: 20rem;
+  height: auto;
+  padding: 0.75rem 0.75rem;
+  background: #1E2329;
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 5px solid transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  text-align: center;
+  transition: 0.3s;
+}
+.zoneTitle {
+  margin: 0; 
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size: .95rem;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  align-self: flex-start;
+}
+
+.beingDragged {
+  color: white;
+  background-color: black;
+  cursor: grabbing;
+}
+
+.hoverOver {
+  transition: 0.3s ease-out;
+  border-color: #2a9d8f;
+}
+
+@media (max-width: 800px) {
+  .app {
+    gap: 0.75rem;
+  }
+
+  .dragElement {
+    width: 6rem;
+    height: 9rem;
+    font-size: 60%;
+  }
+
+  .dropZone {
+    width: 20rem;
+    height: 20rem;
+  }
+}
